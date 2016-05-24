@@ -13,6 +13,8 @@ RUN apt-add-repository ppa:webupd8team/java && \
                     oracle-java8-unlimited-jce-policy \
                     oracle-java8-set-default
 
+RUN apt-get install -y make
+
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 CMD ["/sbin/my_init"]
